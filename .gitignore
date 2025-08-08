@@ -1,0 +1,114 @@
+# macOS metadata / cache
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+build/
+dist/
+pip-wheel-metadata/
+
+# -------------------------
+# Virtual environments
+# -------------------------
+.venv/
+venv/
+ENV/
+env/
+
+# -------------------------
+# IDE / Editor
+# -------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+
+# -------------------------
+# OS-specific
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# DVC
+# -------------------------
+.dvc/
+*.dvc
+# DVC cache (if local cache is inside repo)
+.cache/
+# Prevent raw/processed heavy datasets from entering git
+data/raw/
+data/processed/
+!data/**/*.gitignore  # allow nested gitignore placeholders
+
+# -------------------------
+# MLflow
+# -------------------------
+mlruns/
+mlartifacts/
+
+# -------------------------
+# Zarr datasets (heavy binary stores)
+# -------------------------
+*.zarr/
+*.zarr.zip
+*.zarr.tar
+*.zarr.tar.gz
+
+# -------------------------
+# Jupyter notebooks
+# -------------------------
+.ipynb_checkpoints/
+*.ipynb_convert
+
+# -------------------------
+# Logs / temp
+# -------------------------
+logs/
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+*.bak
+
+# -------------------------
+# Test / coverage
+# -------------------------
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.pytest_cache/
+
+# -------------------------
+# Local config / secrets
+# -------------------------
+.env
+.env.*
+*.secrets
+secrets.yml
+config.local.*

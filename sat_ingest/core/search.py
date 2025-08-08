@@ -5,11 +5,11 @@ from typing import Optional, Iterable
 @dataclass
 class SearchParams:
     collections: Optional[list[str]] = None
-    time: Optional[str] = None  # ISO8601 range, e.g. "2024-01-01/2024-01-31"
+    time: Optional[str] = None  # Date and Time range is based on ISO8601, e.g. "2024-01-01/2024-01-31"
     intersects: Optional[dict] = None  # GeoJSON geometry
     bbox: Optional[list[float]] = None  # [minx, miny, maxx, maxy]
     limit: int = 100
-    query: Optional[dict] = None  # provider-specific filters, e.g. {"eo:cloud_cover": {"lt": 20}}
+    query: Optional[dict] = None  # specific filters for each data provider, like {"eo:cloud_cover": {"lt": 20}}
 
     def to_stac_payload(self) -> dict:
         body = {k: v for k, v in {
