@@ -17,9 +17,23 @@ sat download --collections sentinel-2-l2a \
 
 
 AWS Credentials
-If you want to download Requester Pays datasets like Landsat C2/L2, copy .env.example to .env and fill in your values.
+If you want to download Requester Pays datasets like Landsat C2/L2, 
+copy .env.example to .env and fill in your values.
+
 Then run:
 ```bash
 export $(grep -v '^#' .env | xargs)
 ```
-Or use direnv / Docker --env-file.
+Or use direnv / Docker --env-file. An env.example file exists inside the repo, 
+which the code will pick up if you add your information into it.
+
+Some helpful links if you're really new to all this/just for reference:
+
+1. AWS CLI env var setup:
+https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html
+
+2. Configuring AWS profiles:
+https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html
+
+3. Requester Pays info:
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/RequesterPaysBuckets.html
