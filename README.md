@@ -1,4 +1,4 @@
-# sat-ingest (skeleton)
+# Currently just the skeleton
 
 ## Quick start
 ```bash
