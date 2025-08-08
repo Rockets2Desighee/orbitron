@@ -13,3 +13,13 @@ sat download --collections sentinel-2-l2a \
   --time 2024-07-01/2024-07-02 \
   --bbox -122.6,37.6,-122.2,37.9 \
   --limit 1
+```
+
+
+AWS Credentials
+If you want to download Requester Pays datasets like Landsat C2/L2, copy .env.example to .env and fill in your values.
+Then run:
+```bash
+export $(grep -v '^#' .env | xargs)
+```
+Or use direnv / Docker --env-file.
